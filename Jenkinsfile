@@ -23,10 +23,10 @@ node('php'){
         )
     }
     stage('Docker Build') {
-        sh 'docker build -t jeffersonsouza/todoapi:$BUILD_NUMBER .'
+        sh 'docker build -t mattes40/todoapi:$BUILD_NUMBER .'
     }
     
     stage('Docker Ship') {
-        sh 'docker push jeffersonsouza/todoapi:$BUILD_NUMBER'
+        sh 'docker push mattes40/todoapi:$BUILD_NUMBER'
     }
 }
